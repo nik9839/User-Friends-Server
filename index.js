@@ -1,13 +1,19 @@
 const http = require("http");
+let express = require('express');
+let bodyParser = require('body-parser');
 
 const port = 3000;
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World\n');
-  });
-  
-  server.listen(port, () => {
-    console.log('Server running on port ' + port);
-  });
+const app = express()
+app.use(bodyParser.json());
+
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+  })
+
+
+app.listen(port, () => {
+    console.log("project running on port "+  port)
+})
+
+module.exports = app
