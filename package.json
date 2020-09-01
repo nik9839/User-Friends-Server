@@ -2,8 +2,10 @@
   "name": "user_friends",
   "version": "1.0.0",
   "description": "User, friends & friends of friends",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "nikhil gupta",
@@ -11,5 +13,8 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
