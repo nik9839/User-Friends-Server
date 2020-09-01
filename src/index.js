@@ -7,10 +7,7 @@ const port = 3000;
 const app = express()
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-    res.send('Helloo World!')
-  })
-
+app.use('/api', require('./apis/routes'));
 
 app.listen(port, () => {
     console.log("project running on port "+  port)
