@@ -1,0 +1,11 @@
+{
+  "name": "user_friends",
+  "version": "1.0.0",
+  "description": "User, friends & friends of friends",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nikhil gupta",
+  "license": "ISC"
+}
