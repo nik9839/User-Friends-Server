@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "user_friend_user",
-    "password": "",
+    "password": "user_friend_password",
     "database": "user_friend",
     "host": "127.0.0.1",
     "port": 5432,
