@@ -3,11 +3,19 @@ var router = express.Router()
 
 const Users = require('../../models').users;
 
+// DIFFERENT METHODS AVALABLE ON THIS ROUTE
 router
     .route("/")
     .get(function(req,res, next){
         let page = req.query.page
         let size = req.query.size
+        if(isNaN(page)){
+            page = 1;
+        }
+        
+        if(isNaN(size)){
+            size = 5;
+        }
         let offset = (page -1) * size
         return Users
                 .findAndCountAll({

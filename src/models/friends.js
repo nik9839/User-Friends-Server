@@ -1,5 +1,6 @@
 const {Model} = require('sequelize');
 
+// User Friends Mapping table model
 module.exports = (sequelize, DataTypes) => {
     class userfriend extends Model {
         static associate(models) {

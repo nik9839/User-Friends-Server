@@ -6,11 +6,19 @@ const Users = require('../../models').users;
 
 const db = require('../../models')
 
+// DIFFERENT METHODS AVALABLE ON THIS ROUTE
 router
     .route("/:id/friends")
     .get(function(req,res, next){
         let page = req.query.page
         let size = req.query.size
+        if(isNaN(page)){
+            page = 1;
+        }
+        
+        if(isNaN(size)){
+            size = 5;
+        }
         let offset = (page -1) * size
         let user = req.params.id
         const friends  = db.sequelize.dialect.queryGenerator.selectQuery('userfriends',{
