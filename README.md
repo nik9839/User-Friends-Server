@@ -7,7 +7,8 @@ Sequelize ORM is used to interact with Postgres DB.
 ## Setup
 
  - Create PostgreSQL DATABASE if not available.
- - Update the Database config in src/config/config.json, use ENV VARIABLE if running in Production
+ - Update the Database config in src/config/config.json, for development server user `develpoment` block, use ENV VARIABLE if running in Production
+ - RUN `npm i` to install all the required package
  - RUN `sequelize db:migrate` to create database schema
  - RUN `sequelize db:seed:all` to load initial data
  - Use command `npm start` to start the server
